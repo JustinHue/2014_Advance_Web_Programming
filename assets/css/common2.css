@@ -1,0 +1,299 @@
+
+/* ==================================================================================================================
+    Top Header
+    =================================================================================================================*/
+#top-header {
+    width: 100%;
+    background: #121212;
+    height: 75px;
+    background: #050c0f; /* Old browsers */
+
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzA1MGMwZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwNTBjMGYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+
+    background: -moz-linear-gradient(left,  #050c0f 0%, #000000 50%, #050c0f 100%); /* FF3.6+ */
+
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#050c0f), color-stop(50%,#000000), color-stop(100%,#050c0f)); /* Chrome,Safari4+ */
+
+    background: -webkit-linear-gradient(left,  #050c0f 0%,#000000 50%,#050c0f 100%); /* Chrome10+,Safari5.1+ */
+
+    background: -o-linear-gradient(left,  #050c0f 0%,#000000 50%,#050c0f 100%); /* Opera 11.10+ */
+
+    background: -ms-linear-gradient(left,  #050c0f 0%,#000000 50%,#050c0f 100%); /* IE10+ */
+
+    background: linear-gradient(to right,  #050c0f 0%,#000000 50%,#050c0f 100%); /* W3C */
+
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#050c0f', endColorstr='#050c0f',GradientType=1 ); /* IE6-8 */
+
+    box-shadow: 0 4px 2px -2px gray;
+}
+#top-header-content {
+    margin: auto;
+    width: 1000px;
+    position: relative;
+    height: 100%;
+}
+#top-header-content span {
+    display: block;
+    position: absolute;
+    font-size: 28px;
+    font-family: "Ubuntu";
+    color: #CADDD9;
+    top: 25px;
+    left: 350px;
+    text-transform: uppercase;
+    letter-spacing:0.1618em;
+    text-shadow: 0 0 10px #CADDD9;    
+}
+#top-header-content a {
+    text-decoration: none;
+}
+#top-header-content span:hover {
+    text-shadow: 0 0 15px #CADDD9;
+    color: #B5C6C3;
+}
+#top-header-content nav {
+    position: absolute;
+}
+#top-header-content #main-nav {
+    left: 85px;
+    top: 31px;
+    font-size: 17px;
+}
+#top-header-content #main-nav a {
+    font-family: "Ubuntu";    
+    text-transform: uppercase;
+    color: #DDDDDD;
+    letter-spacing:0.0168em;
+    margin-right: 15px;
+    letter-spacing: 0.080em;
+    padding-bottom:5px;
+}
+#top-header-content #main-nav a:hover {
+    border-bottom: solid 2px #FFB144;
+}
+#top-header-content #main-nav a.mn-selected {
+    color: #FFB144;
+}
+
+#top-header-content #info-nav {
+    right: 70px;
+    top: 32px;
+    font-size: 16px;
+}
+#top-header-content #info-nav a {
+    font-family: "Ubuntu";    
+    text-transform: Capital;
+    color: #AAAAAA;
+    letter-spacing:0.0168em;
+    margin-right: 10px;   
+    padding-bottom:3px;
+}
+#top-header-content #info-nav a:hover {
+    border-bottom: solid 2px #81C1CD;
+}
+#top-header-content #info-nav a.in-selected {
+    color: #81C1CD;
+}
+.arrow-up {
+    position: absolute;
+    width: 0; 
+    height: 0; 
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+}
+.arrow-main-nav-color {
+    border-bottom: 7px solid #EEEEEE;
+}
+.arrow-info-nav-color {
+    border-bottom: 7px solid #909090;
+}
+.main-nav-arrow-0 {
+    left: 130px;
+    bottom: 0px;
+}
+.main-nav-arrow-1 {
+    left: 240px;
+    bottom: 0px;
+}
+.info-nav-arrow-0 {
+    right: 256px;
+    bottom: 0px;
+}
+.info-nav-arrow-1 {
+    right: 182px;
+    bottom: 0px;
+}
+.info-nav-arrow-2 {
+    right: 101px;
+    bottom: 0px;
+}
+.pcat-first {
+    border-left: 20px solid #0B486B; 
+}
+.pcat-second {
+    border-left: 20px solid #3B8686;   
+}
+.pcat-third {
+    border-left: 20px solid #79BD9A;   
+}
+/* ==================================================================================================================
+    Sub Header
+    =================================================================================================================*/
+
+#sub-header {
+    width: 100%;
+    height: 35px;
+    background: #EFEFEF; 
+    box-shadow: 0 4px 2px -2px gray;  
+}
+#sub-header #sub-header-content {
+    margin: auto;
+    width: 1000px;
+    position: relative;
+    text-align: center;
+}
+#sub-header #sub-header-content a {
+    margin-top: 1px;
+    font-size: 12px;
+    font-family:"Open Sans";    
+    text-decoration: none;
+    color: #232323;
+    text-transform: uppercase;
+    padding: 11px 11px 10px 11px;
+    background: #EFEFEF;
+    display: inline-block;
+    border-right: dotted 1px #222222;
+    width: 100px;
+    text-align: center;
+}
+#sub-header #sub-header-content a:hover, #sub-header #sub-header-content .subnav-selected {
+    border-bottom: solid 1px #0000AA;
+    background: #DBE6EC;
+}
+#sub-header #sub-header-content a.pi-first {
+    border-left: dotted 1px #222222;
+}
+/* ==================================================================================================================
+    Footer
+    =================================================================================================================*/
+    
+/* ==================================================================================================================
+    Thumbs
+    =================================================================================================================*/
+#thumb-1 {
+    left: 0px;
+}
+#thumb-2 {
+    left: 334px;
+}
+#thumb-3 {
+    left: 669px;
+}
+#thumbs-wrapper {
+    width: 1000px;
+    margin: auto;
+    height: 100px;
+}
+/* ==================================================================================================================
+    Content Area
+    =================================================================================================================*/
+#content {
+    width: 100%; 
+}
+#content-1000 {
+    width: 1000px;
+    margin: auto; 
+}
+#slider-area {
+    width: 1000px;
+    height: 415px;
+    margin: auto;
+}
+#main-page-content {
+    width: 1000px;
+    margin: 50px auto 50px auto;
+    position: relative;
+    height: 450px;
+    background: #FFFFFF;
+    border: solid 1px #CCCCCC;
+}
+#main-page-content div {
+    position: absolute;
+    width: 500px;
+    height: 100%;
+}
+#main-page-content div span.section-title {
+    font-size: 28px;
+    font-family: "Droid Sans";
+    /* color: #282828; */
+    color: #B90504;
+    padding: 20px 20px 7px 20px;
+    display: block;
+    border-bottom: solid 2px #2E2E2E;
+    margin-right: 50px;
+    
+}
+#main-page-content div section h1 {
+    font-size: 17px;
+    font-family: "Droid Sans";
+    padding: 20px 20px 6px 20px;
+    color: #111111;
+}
+#main-page-content div section p {
+    padding: 0px 20px 30px 20px;
+    color: #282828;
+    font-family: "Open Sans";
+    font-size: 11px;
+    line-height: 1.3em;
+}
+#main-page-content div section span.blog-section-readmore {
+    color: #B90504;
+    position: absolute;
+    bottom: 10px;
+    right: 50px;
+    font-size: 13px;
+}
+#main-page-content div section a.blog-section-link:hover {
+    font-weight: bold;
+}
+#main-page-content div section a {
+    text-decoration: none;
+}
+#main-page-content div section {
+    position: relative;
+    border-bottom: dotted 1px #888888;
+}
+#main-page-content div section:hover {
+    background: #EFEFEF;
+}
+#main-page-content #blog-section section span.blog-section-date {
+    position: absolute;
+    right: 50px;
+    top: 23px;
+    font-size: 12px;
+    font-family: "Open Sans";
+    color: #484848;   
+}
+#main-page-content #blog-section {
+    position: relative;
+    left: 0px;
+    border-right: solid 1px #CCCCCC;
+}
+#main-page-content #updates-section {
+    left: 500px;
+}
+#main-page-portfolio-section #portfolio-categories {
+    text-align: left;     
+}
+#main-page-portfolio-section section h1 {
+    font-size: 28px;    
+    font-family: "Ubuntu";
+    text-transform: Capital;    
+}
+#main-page-portfolio-section section p {
+    font-size: 18px;
+    font-family: "Verdana";
+    text-align: center;
+}

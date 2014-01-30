@@ -1,0 +1,32 @@
+
+
+#top-nav {
+    position: absolute;
+    left: 240px;
+    top: 25px;
+}
+
+#top-nav ul li {
+	text-align:center;
+	font-family:"Open Sans";
+    display: inline-block;
+    margin-right: 8px;
+    font-size: 16px;
+    text-transform:uppercase;
+    letter-spacing: 0.5px;
+}
+
+#top-nav ul li.menu-item-selected a {
+    color: #02779E;
+}
+#top-nav ul li.menu-item:hover a {
+    color: #02779E;
+}
+#top-nav ul li a {
+	text-decoration: none;
+	color:#EDEDED;
+	display: block;
+	width: 100%;
+	outline: none;
+    text-shadow: 0.1em 0.1em 0.05em #111111;
+}

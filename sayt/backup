@@ -1,0 +1,9 @@
+		    data: "q=" + encodeURIComponent(this.typedQuery) + "&limit=6&timestamp=" + timestamp2.getTime() + "&dimensions=8528%2B844%2B11225%2B8529%2B8357%2B8271%2B9798%2B9042",
+		    
+		    
+		    data: {
+		    	 'q': encodeURIComponent(this.typedQuery),
+		    	 'limit': 6,
+		    	 'timestamp': timestamp2.getTime(),
+		    	 'dimensions': "8528%2B844%2B11225%2B8529%2B8357%2B8271%2B9798%2B9042"		    	
+		    },

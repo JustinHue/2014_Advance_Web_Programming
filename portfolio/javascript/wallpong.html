@@ -1,0 +1,246 @@
+
+
+
+<html>
+
+    <head>
+        <link rel="stylesheet" href="/assets/css/reset.css" type="text/css" media=screen>        
+        <script type="text/javascript" src="/assets/js/jquery-1.10.2.min.js"></script>
+
+        <script type="text/javascript">
+            
+            // Game CONSTANTS
+            var KEY_LEFT = 37;
+            var KEY_RIGHT = 39;
+            var KEY_NONE = 0;
+            var KEY_MAX = 256;
+            
+            var INCREASE_SPEED = 0.5;
+            var MIN_SPEED = -20, MAX_SPEED = 20; 
+            var PADDLE_SPEED = 20;
+            
+            var PADDLE_OFFSET_HEIGHT = 50;
+            var TOP_SCORE_AMOUNT = 10;
+            
+            // Ball Variables
+            var ballx, bally;
+            var ballxSpeed, ballySpeed;
+            var ballsize;            
+            
+            // Paddle Variables
+            var paddlex, paddley;
+            var paddlew, paddleh;            
+            
+            // Other Variables
+            var score, playAgain;
+            var keys = new Array();
+            
+            // Elements
+            var paddle, ball, messagetext, scoreboard;            
+            var colors = new Array('red', 'blue', 'green', 'yellow', 'black', 'white', 'brown', 'purple', 'orange', 'grey');
+            
+            $(function(){
+        
+                gameInit();
+                
+                // Update Ball 30 fps.
+                var frames = 30;
+                var fps = 1000 / frames; 
+                                  
+                updateGame();
+                updateRectTimeOut = setInterval("updateGame()", fps);
+                
+            });        
+            
+            // Key Event Call Backs
+            function keyLeftPressed() {
+                paddlex -= PADDLE_SPEED;
+                if (paddlex < 0) {
+                    paddlex = 0;
+                }
+                paddle.style.left = paddlex.toString() + "px";
+            }
+            
+            function keyRightPressed() {
+                paddlex += PADDLE_SPEED;
+                if (paddlex + paddlew > window.innerWidth) {
+                    paddlex = window.innerWidth - paddlew;
+                }
+                paddle.style.left = paddlex.toString() + "px";
+            }
+            
+            
+            function gameInit() {
+                
+                // Set Key Listeners
+                document.addEventListener('keydown', function(event) {
+                    if (!playAgain) {
+                        playAgain = true;
+                        reset();
+                        messagetext.innerHTML = "";                        
+                    }                
+                    if(event.keyCode == KEY_LEFT) {
+                        keys[KEY_LEFT] = true;
+                    } else if(event.keyCode == KEY_RIGHT) {
+                        keys[KEY_RIGHT] = true;
+                    } 
+                });
+                document.addEventListener('keyup', function(event) {
+                    if (event.keyCode == KEY_LEFT) {
+                        keys[KEY_LEFT] = false;                        
+                    } else if (event.keyCode == KEY_RIGHT) {
+                        keys[KEY_RIGHT] = false;
+                    } 
+                });
+                                
+                paddle = document.getElementById("paddle");
+                ball = document.getElementById("ball");                               
+                scoreboard = document.getElementById("score");
+                messagetext = document.getElementById("message-text");
+                
+                reset();
+                
+            }
+            
+            function reset() {
+                paddlew = paddle.offsetWidth;
+                paddleh = paddle.offsetHeight;                                             
+                                                        
+                // Assume width is same as height
+                ballsize = ball.offsetWidth;
+                
+                paddlex = window.innerWidth / 2 - paddlew / 2;
+                paddley = window.innerHeight - PADDLE_OFFSET_HEIGHT;            
+                                                
+                paddle.style.left = paddlex.toString() + "px";
+                paddle.style.top = paddley.toString() + "px"; 
+                
+                ballx = window.innerWidth / 2 - ballsize / 2;
+                bally = window.innerHeight / 2 - ballsize / 2;
+                
+                ball.style.left = ballx.toString() + "px";
+                ball.style.top = bally.toString() + "px";
+                
+                ballxSpeed = (Math.random() * (MAX_SPEED - MIN_SPEED)) + MIN_SPEED;
+                ballySpeed = -(Math.random() * MAX_SPEED);
+                
+                // Set up other stuff
+                score = 0;
+                scoreboard.innerHTML = score.toString();
+                            
+            }
+            
+            function updateGame() {
+                                
+                if (playAgain) {
+                    // Move Ball
+                    ballx += ballxSpeed;
+                    bally += ballySpeed;
+                    ballx += INCREASE_SPEED;
+                    bally += INCREASE_SPEED;
+                                        
+                    // Ball Boundary Check
+                    if (ballx < 0) {
+                        ballx = 0;
+                        ballxSpeed *= -1;
+                    } else if (ballx + ballsize > window.innerWidth) {
+                        ballx = window.innerWidth - ballsize;
+                        ballxSpeed *= -1;
+                    }
+                    if (bally < 0) {
+                        bally = 0;
+                        ballySpeed *= -1;         
+                        // Update Score           
+                        score += TOP_SCORE_AMOUNT;
+                        scoreboard.innerHTML = score.toString();                    
+                    } else if (bally > window.innerHeight) {
+                        // Game Over
+                        messagetext.innerHTML = "Game Over! Press any key to play again.";
+                        playAgain = false;                        
+                    }
+                    
+                    // Move Paddle
+                    if (keys[KEY_LEFT]) {
+                        keyLeftPressed();
+                    } else if (keys[KEY_RIGHT]) {
+                        keyRightPressed();
+                    }
+                    
+                    // Paddle Boundary Check
+                    if (paddlex < 0) {
+                        paddlex = 0;
+                    } else if (paddlex + paddlew > window.innerWidth) {
+                        paddlex = window.innerWidth - paddlew;
+                    }
+                    
+                    // Paddle + Ball Collision Check                    
+                    if (ballx + ballsize > paddlex && ballx < paddlex + paddlew && 
+                        bally + ballsize > paddley && bally < paddley + paddleh) {
+                        bally = paddley - ballsize;
+                        ballySpeed *= -1;       
+                        // Find angle of collision and re-adjust ballx accordingly.            
+                        var midDistance = (ballx + ballsize / 2) - (paddlex + paddlew / 2);
+                        var ratio = midDistance / paddlew;
+                        ballxSpeed = MAX_SPEED * ratio * 2;
+                        // Change Color of Paddle
+                        var randomColor = Math.floor(Math.random() * colors.length);                        
+                        paddle.style.background = colors[randomColor];
+                    }
+                    
+                    ball.style.left = ballx.toString() + "px";
+                    ball.style.top = bally.toString() + "px";                    
+                }
+            }
+        
+    
+        </script>
+    
+        
+        <style type="text/css" media=screen>
+            body {
+                                          
+                background: #D4CFFA;                
+                
+            }
+            h1 {
+                text-align: center;   
+                margin-top: 20px;
+                font-size: 24px;                       
+                width: 100%;     
+                color: #10254D;
+            }
+            #paddle {
+                position: absolute;
+                width: 150px;
+                height: 25px;
+                background: #343838;
+            }
+            #ball {
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                background: #0B486B;
+            }            
+            #score-box {
+                position: fixed;
+                right: 25px;
+                top: 25px;                
+            }
+            #score-box p {
+                font-family: "Verdana";
+                font-size: 16px;
+                color: #AA33333;
+                font-weight: bold;
+            }
+        </style>
+
+    </head>
+    <body id="body">
+        <h1 id="message-text">Welcome to Wall Pong! Press press left and right to move your paddle!<br /> Don't let the ball hit the bottom! Make it hit the top! Enjoy! <br /> Hit any key to continue </h1>
+        <div id="paddle"></div>
+        <div id="ball"></div>
+        <div id="score-box">
+            <p>Score: <span id="score"><p></span>
+        </div>
+    </body>
+</html>    

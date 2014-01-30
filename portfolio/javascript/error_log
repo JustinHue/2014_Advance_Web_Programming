@@ -1,0 +1,10 @@
+[22-Oct-2013 05:07:46 Europe/Moscow] PHP Warning:  include(INCLUDES_DIRtop_nav.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/hellsten/public_html/includes/header.php on line 51
+[22-Oct-2013 05:07:46 Europe/Moscow] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening 'INCLUDES_DIRtop_nav.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/hellsten/public_html/includes/header.php on line 51
+[22-Oct-2013 05:07:46 Europe/Moscow] PHP Warning:  fopen(INCLUDES_DIRcopyright) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in /home/hellsten/public_html/includes/footer.php on line 13
+[22-Oct-2013 05:07:48 Europe/Moscow] PHP Warning:  include(INCLUDES_DIRtop_nav.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/hellsten/public_html/includes/header.php on line 51
+[22-Oct-2013 05:07:48 Europe/Moscow] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening 'INCLUDES_DIRtop_nav.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/hellsten/public_html/includes/header.php on line 51
+[22-Oct-2013 05:07:48 Europe/Moscow] PHP Warning:  fopen(INCLUDES_DIRcopyright) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory in /home/hellsten/public_html/includes/footer.php on line 13
+[23-Nov-2013 21:50:35 Europe/Moscow] PHP Warning:  Unterminated comment starting line 105 in /home/hellsten/public_html/portfolio/javascript/index.php on line 105
+[23-Nov-2013 21:50:35 Europe/Moscow] PHP Parse error:  syntax error, unexpected '<' in /home/hellsten/public_html/portfolio/javascript/index.php on line 115
+[23-Nov-2013 21:51:05 Europe/Moscow] PHP Warning:  Unterminated comment starting line 108 in /home/hellsten/public_html/portfolio/javascript/index.php on line 108
+[23-Nov-2013 22:03:02 Europe/Moscow] PHP Warning:  Unterminated comment starting line 108 in /home/hellsten/public_html/portfolio/javascript/index.php on line 108
