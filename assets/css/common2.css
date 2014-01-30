@@ -199,6 +199,93 @@
 /* ==================================================================================================================
     Content Area
     =================================================================================================================*/
+#main-page-content {
+    width: 1000px;
+    margin: 50px auto 50px auto;
+    position: relative;
+    background: #FFFFFF;
+    border: solid 1px #CCCCCC;
+    height: 10000px;
+}
+
+/* About Page */
+#main-page-content div#avatar-panel {
+	width: 22%;
+	float: left;
+}
+#main-page-content div#avatar-panel div#avatar-panel-inset img {
+	width: 100%;
+	height: 200px;
+	margin: auto;
+	display: block;
+	-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+#main-page-content div#avatar-panel div#avatar-panel-inset div#name {
+	color: #2F383F;
+        font-weight: bold;
+        font-family: "Old Standard TT";
+        font-size: 1.1em;
+	padding: 1em;
+}
+#main-page-content div#avatar-panel div#avatar-panel-inset div#number {
+        color: #2F383F;
+        font-weight: bold;
+        font-family: "Old Standard TT";
+        font-size: 1.1em;
+        padding: 1em;
+}
+#main-page-content div#avatar-panel div#avatar-panel-inset {
+	padding: 0.75em;
+}
+
+#main-page-content div#about-me {
+	width: 78%;
+	float: right;
+}
+
+#main-page-content section {
+	padding: 2.0%;
+}
+#main-page-content section header {
+
+}
+
+#main-page-content section img {
+	margin: 1.5%;
+}
+
+#main-page-content section header h1 {
+        color: #222222;
+        font-weight: bold;
+        font-family: "Ubuntu";
+        font-size: 1.75em;
+        border-bottom: solid 0.05em #333333;
+        padding-bottom: 0.5em;
+}
+
+#main-page-content section header h2 {
+        color: #151515;
+        font-weight: bold;
+        font-family: "Ubuntu";
+        font-size: 1.25em;
+	padding-bottom: 0.75em;
+}
+
+#main-page-content section p, ul {
+	font-size: 1.0em;
+	line-height: 1.5em;
+}
+#main-page-content section ul {
+	padding-left: 1.2em;
+}
+
+#main-page-content section ul li {
+	line-height: 1.5em;
+	list-style-type: circle;
+}
+/*
 #content {
     width: 100%; 
 }
@@ -215,19 +302,13 @@
     width: 1000px;
     margin: 50px auto 50px auto;
     position: relative;
-    height: 450px;
     background: #FFFFFF;
     border: solid 1px #CCCCCC;
 }
-#main-page-content div {
-    position: absolute;
-    width: 500px;
-    height: 100%;
-}
+
 #main-page-content div span.section-title {
     font-size: 28px;
     font-family: "Droid Sans";
-    /* color: #282828; */
     color: #B90504;
     padding: 20px 20px 7px 20px;
     display: block;
@@ -297,3 +378,4 @@
     font-family: "Verdana";
     text-align: center;
 }
+*/

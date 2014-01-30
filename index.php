@@ -4,6 +4,30 @@
     $metaKeywords = "justin hellsten justing helman justins justine just student georgian college android google official website html php css c++ python allegro pygame starcraft broodwar starcraft2 pyrue blizzard programmer programming"
 ?>
 <?php include 'includes/header.php'; ?>
+<div class="row">
+	<div class="small-2 large-4 columns">Projects</div>
+	<div class="small-4 large-4 columns">Services</div>
+	<div class="small-6 large-4 columns">Justin Hellsten</div>
+	<div class="small-6 large-4 columns">About</div>
+	<div class="small-6 large-4 columns">Contact</div>
+	<div class="small-6 large-4 columns">Github</div>
+</div>
+
+<div id="main-page-content">
+
+<div id="welcome-statement">
+	Welcome to my Website!
+</div>
+<div id="tagline">
+	Games | Programming | Technology
+</div>
+<div id="mission-statement">
+	To develop games or applications with technology and my intense, sick and awesome programming skills. 
+</div>
+<div id="featured-work">
+	featured work
+</div>
+<!--
 <div id="slider-area">
     <div id="slider"> 
         <img src="<?php echo JS_DIR.'jsImgSlider/images/image-slider-1.jpg'; ?>" alt="Caption for slide 1" /> 
@@ -26,31 +50,6 @@
         </div>         
     </div>
 </div>
-
-<div id="main-page-content">
-    <div id="updates-section">
-        <span class="section-title">Updates</span>
-    </div>
-    <div id="blog-section">
-        <span class="section-title">Blog</span>
-        <section>
-            <h1>My First Blog Post</h1>
-            <p>I am not sure how to start this as this is the first time I made a blog. I hope I am not a complete bore and if you're an actual person reading this, god forbid. The whole point of my website is to serve as a portfolio to employers to see what I am capable of doing.</p>
-            <span class="blog-section-date">November 17, 2013</span>
-            <a class="blog-section-link" href="/blog/"><span class="blog-section-readmore">Read more...</span></a>
-        </section>
-        <section>
-            <h1>Second Post (NOT REAL)</h1>
-            <p>I am not sure how to start this as this is the first time I made a blog. I hope I am not a complete bore and if you're an actual person reading this, god forbid. The whole point of my website is to serve as a portfolio to employers to see what I am capable of doing.</p>
-            <span class="blog-section-date">November 17, 2013</span>
-            <a class="blog-section-link" href=""><span class="blog-section-readmore">Read more...</span></a>
-        </section>
-        <section>
-            <h1>Third Post (NOT REAL)</h1>
-            <p>I am not sure how to start this as this is the first time I made a blog. I hope I am not a complete bore and if you're an actual person reading this, god forbid. The whole point of my website is to serve as a portfolio to employers to see what I am capable of doing.</p>
-            <span class="blog-section-date">November 17, 2013</span>
-            <a class="blog-section-link" href=""><span class="blog-section-readmore">Read more...</span></a>
-        </section>                  
-    </div>
+-->
 </div>
 <?php include 'includes/footer.php'; ?> 

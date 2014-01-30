@@ -1,6 +1,6 @@
 <?php
-    $mainitems = array('Portfolio' => '/portfolio/javascript', 'Updates' => '/updates/releases');
-    $infoitems = array('About' => '/about', 'Experience' => '/experience', 'Contact' => '/contact');
+    $mainitems = array('Projects' => '/projects', 'Services' => '/services');
+    $infoitems = array('About' => '/about', 'Contact' => '/contact', 'Contact' => '/contact', 'Github' => 'https://github.com/JustinHue');
     
     $portfolioItems = array('Javascript' => '/portfolio/javascript', 'Java' => '/portfolio/java', 'C++' => '/', 'Allegro' => '/portfolio/allegro', 'Python' => '/portfolio/python', 'Pygame' => '/portfolio/pygame', 'HTML 5' => '/portfolio/html5');
         
@@ -11,23 +11,40 @@
 
 <!DOCTYPE html>
 
-<html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en" >
     
 	<head>
-		<link rel="stylesheet" href="<?php echo CSS_DIR.'reset.css' ?>" type="text/css" media=screen>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- If you are using CSS version, only link these 2 files, you may add app.css to use for your overrides if you like. -->
+		<link rel="stylesheet" href="foundation/css/normalize.css">
+		<link rel="stylesheet" href="foundation/css/foundation.css">
+
+		<!-- If you are using the gem version, you need this only -->
+		<link rel="stylesheet" href="/foundation/css/app.css">
+
+		<script src="/foundation/js/vendor/modernizr.js"></script>
+
+
+		<link rel="stylesheet" href="<?php echo CSS_DIR.'common3.css' ?>" type="text/css">
+
+	<!--
 		<link rel="stylesheet" href="<?php echo CSS_DIR.'top_nav.css' ?>" type="text/css" media=screen>
 		<link rel="stylesheet" href="<?php echo CSS_DIR.'common.css' ?>" type="text/css" media=screen>
 	        <link rel="stylesheet" href="<?php echo CSS_DIR.'common2.css' ?>" type="text/css" media=screen>
        	 	<link rel="stylesheet" href="<?php echo CSS_DIR.'galleria.css' ?>" type="text/css" media=screen> 
         	<link rel="stylesheet" href="<?php echo JS_DIR.'jsImgSlider/themes/2/js-image-slider.css' ?>" type="text/css" />
         	<link rel="stylesheet" href="<?php echo JS_DIR.'jsImgSlider/themes/generic.css' ?>" type="text/css" />
-
+	-->
                     
         	<!-- AddThis Smart Layers BEGIN -->
 		<!-- Go to http://www.addthis.com/get/smart-layers to customize -->
 		<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-528ab1e155dea662"></script>
 		<script type="text/javascript">
-		
+	
+	
 		addthis.layers({
 	    		'theme' : 'dark',
     			'share' : {
@@ -154,6 +171,37 @@
 	</head>
 
     <body id="body">   
+<!--
+<div class="full-width top-nav">
+	<div class="row">
+
+                    <?php
+                        $index = 0;
+                        foreach ($mainitems as $item => $link) {
+                            if (isset($mainIndex) && $mainIndex == $index) {
+                                echo '<div class="large-2 columns mainitem"><a class="mn-selected" href="'.$link.'">'.$item.'</a></div>';
+                            } else {
+                                echo '<div class="large-2 columns mainitem"><a href="'.$link.'">'.$item.'</a></div>';
+                            }
+                            $index ++;
+                        }
+                    ?>    
+			<div class="large-5 columns homeitem"><a href="">Justin Hellsten</a></div>
+                    <?php
+                        $index = 0;
+                        foreach ($infoitems as $item => $link) {
+                            if (isset($infoIndex) && $infoIndex == $index) {
+                                echo '<div class="large-1 columns infoitem"><a class="in-selected" href="'.$link.'">'.$item.'</a></div>';
+                            } else {
+                                echo '<div class="large-1 columns infoitem"><a href="'.$link.'">'.$item.'</a></div>';
+                            }
+                            $index ++;
+                        }
+                    ?>
+	</div>
+</div>
+-->
+
         <div id='top-header'> <!-- Top Header -->
             <div id='top-header-content'>
                 <a href="/" title="Home Page"><span>Justin Hellsten</span></a>
