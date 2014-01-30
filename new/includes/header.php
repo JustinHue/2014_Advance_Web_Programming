@@ -25,16 +25,16 @@
         <nav class="top-bar" data-topbar data-options="is_hover: false">
  
                 <ul class="title-area">
-                        <li class="name"><h1><a href="#">Justin Hellsten</a></h1></li>
+                        <li class="name"><h1><a href="index.php">Justin Hellsten</a></h1></li>
                         <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
                 </ul>
 
                 <section class="top-bar-section">
                         <!-- Right Nav Section -->
                         <ul class="right">
-                                <li class="active"><a href="#">About</a></li>
+                                <li class="active"><a href="about.php">About</a></li>
                                 <li class="divider"></li>
-                                <li class="active"><a href="#">Contact</a></li>
+                                <li class="active"><a href="contact.php">Contact</a></li>
                                 <li class="divider"></li>
                                 <li class="active"><a href="https://github.com/JustinHue">Github</a></li>
                         </ul>
